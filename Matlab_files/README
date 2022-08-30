@@ -1,0 +1,16 @@
+This folder contains the scripts and functions to arrange data, calculate POW values, subsequent TRPs and plot the associated Spider plots.
+
+Task related power (TRP) is a measure of the power at each electrode, and is calculated using ther following equation:
+    TRP = log(POW_activation) - log(POW_reference)
+
+POW is defined as the mean square value of the voltage captured from the electrode across the period of interest, in microvolts.
+
+Some of the primary literature on the use of TRP for analysis of design tasks is:
+
+    S. Vieira et al., “Understanding the design neurocognition of mechanical engineers when designing and problem-solving,” Proc. ASME Des. Eng. Tech. Conf., vol. 7, no. November, 2019.
+
+    S. L. da S. Vieira, J. S. Gero, J. Delmoral, V. Gattol, C. Fernandes, and A. A. Fernandes, “Comparing the Design Neurocognition of Mechanical Engineers and Architects: A Study of the Effect of Designer’s Domain,” Proc. Des. Soc. Int. Conf. Eng. Des., vol. 1, no. 1, pp. 1853–1862, 2019.
+
+%%% To be updated with how to run scripts etc once they are complete
+
+
