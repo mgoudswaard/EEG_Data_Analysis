@@ -67,7 +67,7 @@ DigFam_Rest =  np.zeros((16,12),dtype=float)
 
 for participant in range(12):
     N = str(participant+1)
-    fnameDigDes = 'P'+N+'_Phys_Des.csv' 
+    fnameDigDes = 'P'+N+'_Dig_Fam.csv' 
     fnameRest = 'P'+N+'_Resting.csv' 
     TRPoutput = TRP_function(fnameDigDes,fnameRest)
     x = int(participant)
@@ -81,7 +81,7 @@ PhysFam_Rest =  np.zeros((16,12),dtype=float)
 
 for participant in range(12):
     N = str(participant+1)
-    fnameDigDes = 'P'+N+'_Phys_Des.csv' 
+    fnameDigDes = 'P'+N+'_Phys_Fam.csv' 
     fnameRest = 'P'+N+'_Resting.csv' 
     TRPoutput = TRP_function(fnameDigDes,fnameRest)
     x = int(participant)
