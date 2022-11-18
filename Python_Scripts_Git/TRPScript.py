@@ -14,11 +14,11 @@ import os
 
 SampleRate = 125
 
-path = os.path.dirname(os.getcwd())+"/Trimmed_Data"
+path = os.path.dirname(os.getcwd())+"/Pruned_Data"
 
 def POW_function (fname):
     filename = path + "/" + fname
-    RawData = pd.read_csv(filename, sep=',', usecols=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16), skiprows=1, header=None)
+    RawData = pd.read_csv(filename, sep='\t', usecols=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16), skiprows=1, header=None)
     output = np.log(np.mean(np.square(RawData),axis=0))
     #print (output)
     return output
@@ -39,8 +39,8 @@ DigDes_Rest =  np.zeros((16,12),dtype=float)
 
 for participant in range(12):
     N = str(participant+1)
-    fnameDigDes = 'P'+N+'_Dig_Des.csv' 
-    fnameRest = 'P'+N+'_Resting.csv' 
+    fnameDigDes = 'P'+N+'_Dig_Des_Pruned.csv' 
+    fnameRest = 'P'+N+'_Resting_Pruned.csv' 
     TRPoutput = TRP_function(fnameDigDes,fnameRest)
     x = int(participant)
     DigDes_Rest[:,x]=TRPoutput
@@ -53,8 +53,8 @@ PhysDes_Rest =  np.zeros((16,12),dtype=float)
 
 for participant in range(12):
     N = str(participant+1)
-    fnameDigDes = 'P'+N+'_Phys_Des.csv' 
-    fnameRest = 'P'+N+'_Resting.csv' 
+    fnameDigDes = 'P'+N+'_Phys_Des_Pruned.csv' 
+    fnameRest = 'P'+N+'_Resting_Pruned.csv' 
     TRPoutput = TRP_function(fnameDigDes,fnameRest)
     x = int(participant)
     PhysDes_Rest[:,x]=TRPoutput
@@ -67,8 +67,8 @@ DigFam_Rest =  np.zeros((16,12),dtype=float)
 
 for participant in range(12):
     N = str(participant+1)
-    fnameDigDes = 'P'+N+'_Dig_Fam.csv' 
-    fnameRest = 'P'+N+'_Resting.csv' 
+    fnameDigDes = 'P'+N+'_Dig_Fam_Pruned.csv' 
+    fnameRest = 'P'+N+'_Resting_Pruned.csv' 
     TRPoutput = TRP_function(fnameDigDes,fnameRest)
     x = int(participant)
     DigFam_Rest[:,x]=TRPoutput
@@ -81,8 +81,8 @@ PhysFam_Rest =  np.zeros((16,12),dtype=float)
 
 for participant in range(12):
     N = str(participant+1)
-    fnameDigDes = 'P'+N+'_Phys_Fam.csv' 
-    fnameRest = 'P'+N+'_Resting.csv' 
+    fnameDigDes = 'P'+N+'_Phys_Fam_Pruned.csv' 
+    fnameRest = 'P'+N+'_Resting_Pruned.csv' 
     TRPoutput = TRP_function(fnameDigDes,fnameRest)
     x = int(participant)
     PhysFam_Rest[:,x]=TRPoutput
